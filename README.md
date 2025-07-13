@@ -69,45 +69,28 @@ NomNom Food Bot is a beginner-friendly web app that allows you to:
 
 ### For Flask Web App
 
-#### Clone the Repository
+Clone the Repository
 
-bash
+git clone https://github.com/Archana-P-Nair/NomNom-Chatbot.git
 
-git clone [https://github.com/Archana-P-Nair/NomNom-Chatbot/.git
-]
 cd NomNom-Chatbot
 
-#### Set Up the Environment
-
-bash
-
+Set Up the Environment
 python -m venv venv
-
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-#### Install dependencies:
-
-bash
-
+Install Dependencies
 pip install -r requirements.txt
 
-#### Set Up the Database
-
-bash
-
+Set Up the Database
 mysql -u root -p < pandeyji_eatery.sql
 
 Update DB_PASSWORD in db_helper.py with your MySQL password. 🔑
-
-#### Run the Web App
-
-bash
-
+Run the Web App
 python main.py
 
-Inside main.py
-
-run uvicorn main:app --reload
+Inside main.py:
+uvicorn main:app --reload
 
 Open your browser and go to http://127.0.0.1:8000 to use the app! 🌐
 
