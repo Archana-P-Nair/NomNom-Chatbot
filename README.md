@@ -2,6 +2,9 @@
 
 Welcome to NomNom Food Bot! This project is a delightful web-based food ordering system that lets you explore a multi-cuisine menu, place orders, and track them with ease. Built with a Flask backend, MySQL database, and a user-friendly interface, it's a fun way to experience technology while enjoying your favorite meals! You can also build it with Dialogflow for a conversational AI experience. 🍕🙌
 
+https://github.com/user-attachments/assets/c567943f-66df-4910-927e-db647e6a60e1
+
+
 ## Why NomNom Matters? 🍴🌍
 
 NomNom brings a variety of cuisines under one roof, from Butter Chicken to Sushi, making food ordering accessible and enjoyable. It's a step toward enhancing convenience and supporting food lovers everywhere! 
@@ -130,7 +133,7 @@ uvicorn main:app --reload
 🌮Expand Menu: Include more dishes and cuisines. 
 
 
-https://github.com/user-attachments/assets/c567943f-66df-4910-927e-db647e6a60e1
+
 
 
 
