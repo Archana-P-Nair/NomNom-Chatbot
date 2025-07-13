@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>NomNom - Order Delicious Food Online</title>
     <style>
-        /* Custom styles to ensure nomnomtry is the background */
+        
         .section-intro {
             background-image: url('nomnomtry.jpg') !important;
             background-size: cover;
@@ -42,7 +42,7 @@
         body { background-color: #000 !important; color: #fff !important; font-family: sans-serif; }
         
         
-        /* Chatbot Styles */
+       
         #chat-container { position: fixed; bottom: 20px; right: 20px; width: 350px; height: 500px; background: #222; border: 2px solid #555; border-radius: 15px; display: flex; flex-direction: column; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 1000; }
         #chatbox { flex-grow: 1; overflow-y: auto; padding: 15px; color: #fff; }
         .user-message, .bot-message { max-width: 80%; padding: 10px 15px; border-radius: 20px; margin-bottom: 10px; line-height: 1.4; }
@@ -76,7 +76,7 @@
         
     </section>
 
-    <!-- Rest of your content remains unchanged -->
+    
    <section class="about-section" id="about">
     <article class="about-content">
         <h3>Why Choose NomNom?</h3>
@@ -92,12 +92,12 @@
 <section class="menu-section" id="menu">
     <h2 class="section-title"><p style="color: #ffffff;">Our Menu</p></h2>
     <div class="menu-categories">
-        <!-- Main Courses Category -->
+        
         <div class="menu-category">
             <h3><p style="color: #ffffff;">Main Courses</p></h3>
             <div class="menu-items">
                 
-                <!-- Spaghetti Carbonara -->
+                
                 <div class="menu-item">
                     <div class="menu-item-img">
                         <img src="Pasta.webp" alt="Spaghetti Carbonara">
@@ -110,7 +110,7 @@
                     </div>
                 </div>
                 
-                <!-- Margherita Pizza -->
+               
                 <div class="menu-item">
                     <div class="menu-item-img">
                         <img src="pizza.jpeg" alt="Margherita Pizza">
@@ -122,7 +122,7 @@
                         <button class="add-to-cart">Add to Cart</button>
                     </div>
                 </div>
-                <!-- Mexican Tacos -->
+                
                 <div class="menu-item">
                     <div class="menu-item-img">
                         <img src="mexican_tacos.jpeg" alt="Margherita Pizza">
@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 
-                <!-- Butter Chicken -->
+                
                 <div class="menu-item">
                     <div class="menu-item-img">
                         <img src="butter_chicken.jpeg" alt="Butter Chicken">
@@ -148,7 +148,7 @@
                     </div>
                 </div>
                 
-                <!-- Falafel -->
+               
                 <div class="menu-item">
                     <div class="menu-item-img">
                         <img src="Falafel.jpeg" alt="Falafel">
@@ -161,7 +161,7 @@
                     </div>
                 </div>
                 
-                <!-- French Onion Soup -->
+              
                 <div class="menu-item">
                     <div class="menu-item-img">
                         <img src="french onion soup.jpeg" alt="French Onion Soup">
@@ -174,7 +174,7 @@
                     </div>
                 </div>
                 
-                <!-- Goulash -->
+                
                 <div class="menu-item">
                     <div class="menu-item-img">
                         <img src="Goulash.webp" alt="Goulash">
@@ -187,7 +187,7 @@
                     </div>
                 </div>
                 
-                <!-- Pad Thai -->
+               
                 <div class="menu-item">
                     <div class="menu-item-img">
                         <img src="pad thai.webp" alt="Pad Thai">
@@ -200,7 +200,7 @@
                     </div>
                 </div>
                 
-                <!-- Sushi -->
+                
                 <div class="menu-item">
                     <div class="menu-item-img">
                         <img src="sushi.webp" alt="Sushi">
@@ -261,7 +261,7 @@
                     <div class="order-summary">
                         <h4>Your Order</h4>
                         <ul class="cart-items">
-                            <!-- Cart items will appear here -->
+                            
                         </ul>
                         <div class="order-total">
                             <strong>Total: $0.00</strong>
@@ -291,7 +291,7 @@
         </div>
     </div>
 
-    <!-- Chatbot Container -->
+    
     <div id="chat-container">
         <div id="chatbox">
             <div class="bot-message">Hello! Welcome to NomNom. How can I help you today?</div>
@@ -308,10 +308,10 @@
     <script src="script.js"></script>
     
     <script>
-        // Generate a unique session ID for this user's visit
+        
         let sessionId = self.crypto.randomUUID();
 
-        // Handle sending messages when Enter is pressed
+        
         document.getElementById('userInput').addEventListener('keydown', function(event) {
             if (event.key === 'Enter') {
                 sendMessage();
@@ -324,12 +324,12 @@
 
             if (!messageText) return;
 
-            // Display user's message in chatbox
+            
             appendMessage(messageText, 'user-message');
             userInput.value = '';
 
             try {
-                // Send the message to the Python backend
+              
                 const response = await fetch('http://127.0.0.1:8000/', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -345,7 +345,7 @@
 
                 const data = await response.json();
                 
-                // Display bot's response in chatbox
+               
                 appendMessage(data.fulfillmentText, 'bot-message');
 
             } catch (error) {
@@ -360,7 +360,7 @@
             messageDiv.className = className;
             messageDiv.textContent = text;
             chatbox.appendChild(messageDiv);
-            chatbox.scrollTop = chatbox.scrollHeight; // Auto-scroll to the latest message
+            chatbox.scrollTop = chatbox.scrollHeight; 
         }
     </script>
 </body>
