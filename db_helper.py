@@ -1,16 +1,16 @@
 import mysql.connector
 import logging
 
-# Configure logging for debugging
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# Database configuration
+
 DB_HOST = "localhost"
 DB_USER = "root"
 DB_PASSWORD = "<Enter your MySQL database password>"
 DB_NAME = "pandeyji_eatery"
 
-# Food items with prices
+
 food_prices = {
     "butter chicken": 6.00,
     "spaghetti carbonara": 7.00,
@@ -73,9 +73,9 @@ def save_order_to_db(order: dict):
         if next_order_id == -1:
             return -1
 
-        # Insert each food item into the orders table
+       
         for food_item, quantity in order.items():
-            # Get item_id for the food item
+          
             cursor.execute("SELECT item_id FROM food_items WHERE LOWER(name) = %s", (food_item.lower(),))
             result = cursor.fetchone()
             if not result:
@@ -84,17 +84,17 @@ def save_order_to_db(order: dict):
 
             item_id = result[0]
 
-            # Get price for the item
+            
             cursor.execute("SELECT price FROM food_items WHERE item_id = %s", (item_id,))
             price = cursor.fetchone()[0]
 
-            # Insert into orders table
+           
             cursor.execute(
                 "INSERT INTO orders (order_id, item_id, quantity, total_price) VALUES (%s, %s, %s, %s)",
                 (next_order_id, item_id, quantity, price * quantity)
             )
 
-        # Add to order_tracking table
+        
         cursor.execute(
             "INSERT INTO order_tracking (order_id, status) VALUES (%s, %s)",
             (next_order_id, "in progress")
