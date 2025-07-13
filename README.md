@@ -97,19 +97,19 @@ Alternatively, for development with auto-reloading:
 uvicorn main:app --reload
 ```
 
-Open your browser and go to http://127.0.0.1:8000 to use the app! 🌐
+#### Open your browser and go to http://127.0.0.1:8000 to use the app! 🌐
 
 ### For Dialogflow Chatbot
 
-Create a Dialogflow agent at console.dialogflow.com.
+- Create a Dialogflow agent at console.dialogflow.com.
 
-Define intents for "Order Food," "Track Order," and "Menu Inquiry."
+- Define intents for "Order Food," "Track Order," and "Menu Inquiry."
 
-Connect to a webhook (e.g., Flask API) or use fulfillment for responses.
+- Connect to a webhook (e.g., Flask API) or use fulfillment for responses.
 
-Embed the Dialogflow chatbot in index.html using the Dialogflow Web Demo's iframe code.
+- Embed the Dialogflow chatbot in index.html using the Dialogflow Web Demo's iframe code.
 
-Test with voice/text inputs! 
+- Test with voice/text inputs! 
 
 ## How Is It Useful? 🌟
 
@@ -128,3 +128,9 @@ Test with voice/text inputs!
 👥More Features: Add user accounts, order history, and live chat support. 
 
 🌮Expand Menu: Include more dishes and cuisines. 
+
+
+https://github.com/user-attachments/assets/c567943f-66df-4910-927e-db647e6a60e1
+
+
+
