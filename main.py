@@ -44,28 +44,27 @@ async def handle_request(request: Request):
     intent = "unknown"
     current_state = inprogress_orders.get(session_id, {}).get('state')
 
-    # =========== RESTRUCTURED INTENT DETECTION BLOCK ===========
-    # Prioritize state-dependent logic for more robust conversation flow.
+   
 
     message_words = set(message.split())
     greeting_words = {'hi', 'hello', 'hey'}
 
-    # 1. Handle state-dependent intents first
+   
     if current_state == 'ordering':
         if any(word in message for word in ['no', 'nope', 'that\'s all', 'done', 'complete']):
             intent = 'complete_order'
         elif 'remove' in message or "don't want" in message:
             intent = 'remove_from_order'
-        # If it looks like a food item (has a number), treat it as an add request.
+        
         elif re.search(r'\d', message):
             intent = 'add_to_order'
-        # Otherwise, the input is ambiguous in the ordering context.
+       
 
     elif current_state == 'awaiting_order_id':
         if re.match(r'^\d+$', message):
             intent = 'track_order_provide_id'
 
-    # 2. If no state-specific intent was found, check for general intents.
+  
     if intent == "unknown":
         if greeting_words.intersection(message_words):
             intent = 'greeting'
@@ -73,12 +72,11 @@ async def handle_request(request: Request):
             intent = 'new_order'
         elif 'track' in message and 'order' in message:
             intent = 'track_order_start'
-        # Allow starting an order with "add 1 pizza" even if not in 'ordering' state.
+      
         elif 'add' in message and re.search(r'\d', message):
             intent = 'add_to_order'
-    # =========== END OF RESTRUCTURED BLOCK ===========
 
-    # Handle intents
+
     fulfillment_text = ""
 
     if intent == 'greeting':
@@ -93,7 +91,6 @@ async def handle_request(request: Request):
         fulfillment_text = "Let's get your order started! What would you like? (Example: '2 sushi' or '1 pizza and 2 tacos')"
 
     elif intent == 'add_to_order':
-        # Ensure an order session exists
         if session_id not in inprogress_orders or inprogress_orders[session_id].get('state') != 'ordering':
             inprogress_orders[session_id] = {'state': 'ordering', 'items': {}}
 
@@ -179,7 +176,7 @@ async def handle_request(request: Request):
         except ValueError:
             fulfillment_text = "That doesn't look like a valid order ID. Please enter only the number."
 
-    else: # intent == 'unknown'
+    else: 
         if current_state == 'ordering':
             fulfillment_text = "I didn't understand that. Please specify items like '2 sushi' or say 'done' to complete your order."
         else:
