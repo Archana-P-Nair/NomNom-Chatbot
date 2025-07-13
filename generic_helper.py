@@ -1,6 +1,6 @@
 import re
 
-# A mapping for text numbers to integers
+
 num_map = {
     'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5
 }
