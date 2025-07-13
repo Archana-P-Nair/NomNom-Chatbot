@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize cart
+    
     let cart = [];
     let total = 0;
     const cartItemsList = document.querySelector('.cart-items');
     const orderTotal = document.querySelector('.order-total strong');
     
-    // Add to cart functionality
+  
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
     addToCartButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const itemName = menuItem.querySelector('h4').textContent;
             const itemPrice = parseFloat(menuItem.querySelector('.price').textContent.replace('$', ''));
             
-            // Check if item already in cart
+            
             const existingItem = cart.find(item => item.name === itemName);
             
             if (existingItem) {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Update cart display
+    
     function updateCartDisplay() {
         cartItemsList.innerHTML = '';
         
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         orderTotal.textContent = `Total: $${total.toFixed(2)}`;
     }
     
-    // Form submission
+    
     const orderForm = document.querySelector('.order-form');
     orderForm.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // In a real app, you would send this data to your server
+        
         const formData = new FormData(orderForm);
         const orderData = {
             customer: {
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Order submitted:', orderData);
         alert('Thank you for your order! Your delicious food will be prepared soon.');
         
-        // Reset form and cart
+        
         orderForm.reset();
         cart = [];
         total = 0;
