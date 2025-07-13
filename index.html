@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>NomNom - Order Delicious Food Online</title>
+    <style>
+        /* Custom styles to ensure nomnomtry is the background */
+        .section-intro {
+            background-image: url('nomnomtry.jpg') !important;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .section-intro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0);
+        }
+        
+        .section-intro h1,
+        .section-intro .tagline,
+        .link-to-order-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+        
+        body { background-color: #000 !important; color: #fff !important; font-family: sans-serif; }
+        
+        
+        /* Chatbot Styles */
+        #chat-container { position: fixed; bottom: 20px; right: 20px; width: 350px; height: 500px; background: #222; border: 2px solid #555; border-radius: 15px; display: flex; flex-direction: column; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 1000; }
+        #chatbox { flex-grow: 1; overflow-y: auto; padding: 15px; color: #fff; }
+        .user-message, .bot-message { max-width: 80%; padding: 10px 15px; border-radius: 20px; margin-bottom: 10px; line-height: 1.4; }
+        .user-message { background: #007bff; color: white; margin-left: auto; border-bottom-right-radius: 5px; }
+        .bot-message { background: #444; color: #eee; margin-right: auto; border-bottom-left-radius: 5px; }
+        #chat-input-container { display: flex; padding: 10px; border-top: 1px solid #444; }
+        #userInput { flex-grow: 1; background: #333; border: 1px solid #555; border-radius: 20px; padding: 10px 15px; color: white; outline: none; }
+        #send-btn { background: #007bff; color: white; border: none; border-radius: 50%; width: 40px; height: 40px; margin-left: 10px; font-size: 18px; cursor: pointer; }
+    </style>
+</head>
+<body style="background-color: #000 !important; color: #fff !important;">
+    <nav>
+        <ul class="nav-flex-row">
+            <li class="nav-item">
+                <a href="#menu">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#order">Order Now</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="section-intro">
+        
+        
+    </section>
+
+    <!-- Rest of your content remains unchanged -->
+   <section class="about-section" id="about">
+    <article class="about-content">
+        <h3>Why Choose NomNom?</h3>
+        <p>
+           NomNom brings you a world of cuisines, from Sushi to Butter Chicken, all under one roof.
+           Our chefs pour love and expertise into every dish, using only the finest ingredients.
+           With speedy delivery, enjoy restaurant-quality meals in the comfort of your home.
+           Discover your next favorite dish with NomNom's exciting multi-cuisine menu!
+        </p>
+    </article>
+</section>
+
+<section class="menu-section" id="menu">
+    <h2 class="section-title"><p style="color: #ffffff;">Our Menu</p></h2>
+    <div class="menu-categories">
+        <!-- Main Courses Category -->
+        <div class="menu-category">
+            <h3><p style="color: #ffffff;">Main Courses</p></h3>
+            <div class="menu-items">
+                
+                <!-- Spaghetti Carbonara -->
+                <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="Pasta.webp" alt="Spaghetti Carbonara">
+                    </div>
+                    <div class="item-details">
+                        <h4><p style="color: #ffffff;">Spaghetti Carbonara</p></h4>
+                        <p style="color: #ffffff;">Pasta tossed with eggs, pecorino cheese, guanciale, and black pepper, classic Italian comfort food.</p>
+                        <span class="price">$7.00</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Margherita Pizza -->
+                <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="pizza.jpeg" alt="Margherita Pizza">
+                    </div>
+                    <div class="item-details">
+                        <h4><p style="color: #ffffff;">Margherita Pizza</p></h4>
+                        <p style="color: #ffffff;">Traditional pizza with tomato, mozzarella, and fresh basil, Italy’s timeless classic.</p>
+                        <span class="price">$8.00</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Mexican Tacos -->
+                <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="mexican_tacos.jpeg" alt="Margherita Pizza">
+                    </div>
+                    <div class="item-details">
+                        <h4><p style="color: #ffffff;">Mexican Tacos</p></h4>
+                        <p style="color: #ffffff;">Soft or crispy tortillas filled with seasoned meat, salsa, and fresh toppings, a Mexican staple.</p>
+                        <span class="price">$5.00</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Butter Chicken -->
+                <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="butter_chicken.jpeg" alt="Butter Chicken">
+                    </div>
+                    <div class="item-details">
+                        <h4><p style="color: #ffffff;">Butter Chicken</p></h4>
+                        <p style="color: #ffffff;">Creamy tomato-based curry with tender chicken and aromatic spices, an Indian favorite.</p>
+                        <span class="price">$6.00</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Falafel -->
+                <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="Falafel.jpeg" alt="Falafel">
+                    </div>
+                    <div class="item-details">
+                        <h4><p style="color: #ffffff;">Falafel</p></h4>
+                        <p style="color: #ffffff;">Deep-fried chickpea balls served in pita with tahini and fresh vegetables, a Middle Eastern delight.</p>
+                        <span class="price">$5.00</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- French Onion Soup -->
+                <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="french onion soup.jpeg" alt="French Onion Soup">
+                    </div>
+                    <div class="item-details">
+                        <h4><p style="color: #ffffff;">French Onion Soup</p></h4>
+                        <p style="color: #ffffff;">Rich beef broth with caramelized onions, topped with melted cheese and croutons, a French classic.</p>
+                        <span class="price">$4.00</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Goulash -->
+                <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="Goulash.webp" alt="Goulash">
+                    </div>
+                    <div class="item-details">
+                        <h4><p style="color: #ffffff;">Goulash</p></h4>
+                        <p style="color: #ffffff;">Hearty stew with paprika, onions, and peppers, often served with noodles, Hungary’s signature dish.</p>
+                        <span class="price">$7.00</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Pad Thai -->
+                <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="pad thai.webp" alt="Pad Thai">
+                    </div>
+                    <div class="item-details">
+                        <h4><p style="color: #ffffff;">Pad Thai</p></h4>
+                        <p style="color: #ffffff;">Stir-fried rice noodles with shrimp, peanuts, bean sprouts, and tamarind sauce, Thailand’s iconic street food.</p>
+                        <span class="price">$9.00</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Sushi -->
+                <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="sushi.webp" alt="Sushi">
+                    </div>
+                    <div class="item-details">
+                        <h4><p style="color: #ffffff;">Sushi</p></h4>
+                        <p style="color: #ffffff;">Bite-sized rice rolls with fresh, seaweed, and vegetables, often served with soy sauce, Japan’s culinary art.</p>
+                        <span class="price">$6.00</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <div id="food-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="nomnomtry2.webp">
+            </div>
+            <div class="carousel-item">
+                <img src="nomnomtry3.webp">
+            </div>
+            <div class="carousel-item">
+                <img src="nomnomtry1.webp" class="d-block w-100" alt="Burger">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#food-carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#food-carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="container order-section" id="order">
+        <div class="row-flex">
+            <div class="flex-column-form">
+                <h3><p style="color: #ffffff;">Place Your Order</p></h3>
+                <form class="order-form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Delivery Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Special Instructions"></textarea>
+                    </div>
+                    <div class="order-summary">
+                        <h4>Your Order</h4>
+                        <ul class="cart-items">
+                            <!-- Cart items will appear here -->
+                        </ul>
+                        <div class="order-total">
+                            <strong>Total: $0.00</strong>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Place Order</button>
+                </form>
+            </div>
+            
+            <div class="delivery-info">
+                <h3>Delivery Info</h3>
+                <p>
+                    <span>Delivery Hours: 11:00 AM — 10:00 PM</span>
+                    <span>Delivery Fee: $2.50</span>
+                    <span>Minimum Order: $15.00</span>
+                </p>
+            </div>
+            
+            <div class="contact-address" id="contact">
+                <h3>Contact Us</h3>
+                <p>
+                    <span>Phone: +91 98576 08456</span>
+                    <span>Email: order@nomnom.com</span>
+                    <span>Address: Karghar, Navi Mumbai, Maharashtra, INDIA</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot Container -->
+    <div id="chat-container">
+        <div id="chatbox">
+            <div class="bot-message">Hello! Welcome to NomNom. How can I help you today?</div>
+        </div>
+        <div id="chat-input-container">
+            <input type="text" id="userInput" placeholder="Type 'new order' to begin...">
+            <button id="send-btn" onclick="sendMessage()">➤</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        // Generate a unique session ID for this user's visit
+        let sessionId = self.crypto.randomUUID();
+
+        // Handle sending messages when Enter is pressed
+        document.getElementById('userInput').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        async function sendMessage() {
+            const userInput = document.getElementById('userInput');
+            const messageText = userInput.value.trim();
+
+            if (!messageText) return;
+
+            // Display user's message in chatbox
+            appendMessage(messageText, 'user-message');
+            userInput.value = '';
+
+            try {
+                // Send the message to the Python backend
+                const response = await fetch('http://127.0.0.1:8000/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        session_id: sessionId,
+                        message: { text: messageText }
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                
+                // Display bot's response in chatbox
+                appendMessage(data.fulfillmentText, 'bot-message');
+
+            } catch (error) {
+                console.error('Error:', error);
+                appendMessage('Sorry, something went wrong. Please try again.', 'bot-message');
+            }
+        }
+
+        function appendMessage(text, className) {
+            const chatbox = document.getElementById('chatbox');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = className;
+            messageDiv.textContent = text;
+            chatbox.appendChild(messageDiv);
+            chatbox.scrollTop = chatbox.scrollHeight; // Auto-scroll to the latest message
+        }
+    </script>
+</body>
+</html>
