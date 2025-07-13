@@ -9,21 +9,32 @@ NomNom brings a variety of cuisines under one roof, from Butter Chicken to Sushi
 ## What's This Project About? ✨
 
 NomNom Food Bot is a beginner-friendly web app that allows you to:
+
 📋 Browse a diverse menu with items like Spaghetti Carbonara, Tacos, and Falafel 
+
 🛒 Add items to your cart and place orders with a simple form 
+
 📦 Track your order status in real-time with a unique order ID 
+
 ✨🎇 Experience real-time cart updates with Flask or chat with the Dialogflow bot!
 
 ## What's in the Box? 📦
 
 ### Core Files:
-🗃️`pandeyji_eatery.sql`: SQL script to set up the MySQL database 
+🗃️`pandeyji_eatery.sql`: SQL script to set up the MySQL database
+
 💻 `script.js`: JavaScript for cart and order form functionality 
+
 🐍 `db_helper.py`: Python module for MySQL database interaction 
+
 🔧 `generic_helper.py`: Utility functions for text processing 
+
 🌐 `index.html`: Main webpage with menu and order sections 
+
 🎨 `index.css`: Styling for the web interface 
+
 🚀 `main.py`: Flask API for order processing 
+
 📜 `requirements.txt`: Project dependencies 
 
 ### Dialogflow Option:
@@ -32,10 +43,15 @@ NomNom Food Bot is a beginner-friendly web app that allows you to:
 ## Prerequisites 🛠️
 
 🐍 Python 3.8+ 
+
 📊 MySQL Server 
+
 📚 Required libraries: `fastapi`, `mysql-connector-python`, `uvicorn` 
+
 🌐 (Optional) Dialogflow Account for chatbot alternative 
+
 🌐 Web Browser 
+
 🍔😄 A Hungry Mind! 
 
   
@@ -56,23 +72,29 @@ NomNom Food Bot is a beginner-friendly web app that allows you to:
 #### Clone the Repository
 
 bash
-git clone https://github.com/Archana-P-Nair/NomNom-Chatbot/.git
+
+git clone [https://github.com/Archana-P-Nair/NomNom-Chatbot/.git
+]
 cd NomNom-Chatbot
 
 #### Set Up the Environment
 
 bash
+
 python -m venv venv
+
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 #### Install dependencies:
 
 bash
+
 pip install -r requirements.txt
 
 #### Set Up the Database
 
 bash
+
 mysql -u root -p < pandeyji_eatery.sql
 
 Update DB_PASSWORD in db_helper.py with your MySQL password. 🔑
@@ -80,9 +102,11 @@ Update DB_PASSWORD in db_helper.py with your MySQL password. 🔑
 #### Run the Web App
 
 bash
+
 python main.py
 
 Inside main.py
+
 run uvicorn main:app --reload
 
 Open your browser and go to http://127.0.0.1:8000 to use the app! 🌐
