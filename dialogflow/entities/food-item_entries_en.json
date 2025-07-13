@@ -1,0 +1,83 @@
+[
+  {
+    "value": "Butter Chicken",
+    "synonyms": [
+      "Butter Chicken",
+      "Indian Chicken Curry",
+      "Makhani Chicken",
+      "Creamy Tomato Chicken"
+    ]
+  },
+  {
+    "value": "Spaghetti Carbonara",
+    "synonyms": [
+      "Spaghetti Carbonara",
+      "Classic Carbonara",
+      "Pasta Carbonara",
+      "Roman Pasta"
+    ]
+  },
+  {
+    "value": "Tacos",
+    "synonyms": [
+      "Tacos",
+      "Mexican Wraps",
+      "Handheld Tacos",
+      "Folded Tortillas"
+    ]
+  },
+  {
+    "value": "Sushi",
+    "synonyms": [
+      "Sushi",
+      "Raw Fish Rolls",
+      "Sushi Rolls",
+      "Japanese Rolls"
+    ]
+  },
+  {
+    "value": "Pad Thai",
+    "synonyms": [
+      "Pad Thai",
+      "Thai Noodles",
+      "Stir-fried Noodles",
+      "Street Noodles"
+    ]
+  },
+  {
+    "value": "French Onion Soup",
+    "synonyms": [
+      "French Onion Soup",
+      "Gratin Soup",
+      "Onion Broth",
+      "Cheesy Onion Soup"
+    ]
+  },
+  {
+    "value": "Pizza",
+    "synonyms": [
+      "Pizza",
+      "Pie",
+      "Flatbread",
+      "Slice"
+    ]
+  },
+  {
+    "value": "Falafel",
+    "synonyms": [
+      "Falafel",
+      "Chickpea Fritters",
+      "Middle Eastern Patties",
+      "Veggie Balls"
+    ]
+  },
+  {
+    "value": "Goulash",
+    "synonyms": [
+      "Goulash",
+      "Paprika Stew",
+      "Hungarian Stew",
+      "Meat and Vegetable Stew"
+    ]
+  }
+]
