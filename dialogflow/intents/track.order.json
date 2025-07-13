@@ -1,0 +1,44 @@
+{
+  "id": "ab6446f5-ae39-4bc6-b964-87b114440da0",
+  "name": "track.order",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "ongoing-order",
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Awesome! Could you share your order ID so I can check the status for you?",
+            "Great! Please tell me your order ID, and I’ll get an update on your order!",
+            "Got it! Can you provide your order ID so I can track your order for you?",
+            "Perfect! What’s your order ID? I’ll check on your order status right away!",
+            "Nice! Just share your order ID, and I’ll give you the latest on your order!"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

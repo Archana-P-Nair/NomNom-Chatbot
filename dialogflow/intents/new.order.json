@@ -1,0 +1,44 @@
+{
+  "id": "51e6c916-7d24-49bf-8e7c-93d4f3aece95",
+  "name": "new.order",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "ongoing-order",
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Hello! Ready to place a new order? Just say something like \"I want two Pizzas and one Falafel,\" making sure to include the quantity for each item. To check an existing order, say \"Track Order.\" Our menu features Butter Chicken, Spaghetti Carbonara, Tacos, Sushi, Pad Thai, French Onion Soup, Pizza, Falafel, and Goulash. What’s tempting you today?",
+            "Hi there! Let’s get your order started! Try saying \"I want two Pizzas and one Falafel,\" and please specify the quantity for each item. Want to track an order? Just say \"Track Order.\" Our delicious menu includes Butter Chicken, Spaghetti Carbonara, Tacos, Sushi, Pad Thai, French Onion Soup, Pizza, Falafel, and Goulash. What can I get for you?",
+            "Welcome! Hungry for something great? For a new order, say something like \"I want two Pizzas and one Falafel,\" ensuring you note the quantity for each item. To check on an order, say \"Track Order.\" Our menu offers Butter Chicken, Spaghetti Carbonara, Tacos, Sushi, Pad Thai, French Onion Soup, Pizza, Falafel, and Goulash. What’s your craving?",
+            "Hey! Excited to take your order! Just say something like \"I want two Pizzas and one Falafel,\" and be sure to include quantities for each item. To track an existing order, say \"Track Order.\" Our menu has Butter Chicken, Spaghetti Carbonara, Tacos, Sushi, Pad Thai, French Onion Soup, Pizza, Falafel, and Goulash. What sounds good?",
+            "Hi! Let’s make your meal happen! For a new order, try saying \"I want two Pizzas and one Falafel,\" making sure to specify the quantity for each item. To follow up on an order, say \"Track Order.\" Our menu includes Butter Chicken, Spaghetti Carbonara, Tacos, Sushi, Pad Thai, French Onion Soup, Pizza, Falafel, and Goulash. What’s on your plate today?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
