@@ -67,19 +67,37 @@ NomNom Food Bot is a beginner-friendly web app that allows you to:
 
 ## How to Run This Project? 🚀
 
+### 1. Clone the Repository
+```shell
+git clone https://github.com/Archana-P-Nair/NomNom-Chatbot.git
+cd NomNom-Chatbot
+```
+### 2. Set up the Environment 
+```shell
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+### 3. Install Dependencies
+```shell
+pip install -r requirements.txt
+```
+### 4. Set Up the Database
+```shell
+mysql -u root -p < pandeyji_eatery.sql
+```
 
-[
-  {"box_2d": [63, 73, 175, 276], "label": "Usage"},
-  {"box_2d": [201, 73, 222, 275], "label": "a horizontal line"},
-  {"box_2d": [188, 110, 244, 381], "label": "1. Clone the Repository:"},
-  {"box_2d": [308, 110, 411, 608], "label": "git clone https://github.com/Archana-P-Nair/NomNom-Chatbot.git\ncd NomNom-Chatbot"},
-  {"box_2d": [435, 110, 492, 401], "label": "2. Set Up the Environment:"},
-  {"box_2d": [515, 110, 618, 626], "label": "python -m venv venv\nsource venv/bin/activate  # On Windows: venv\\Scripts\\activate"},
-  {"box_2d": [642, 110, 699, 396], "label": "3. Install Dependencies:"},
-  {"box_2d": [722, 110, 801, 477], "label": "pip install -r requirements.txt"},
-  {"box_2d": [825, 110, 882, 382], "label": "4. Set Up the Database:"},
-  {"box_2d": [905, 110, 984, 523], "label": "mysql -u root -p < pandeyji_eatery.sql"}
-]
+Update DB_PASSWORD in db_helper.py with your MySQL password. 🔑
+
+### 5. Run the Web App
+```shell
+python main.py
+```
+Alternatively, for development with auto-reloading:
+```shell
+uvicorn main:app --reload
+```
+
+Open your browser and go to http://127.0.0.1:8000 to use the app! 🌐
 
 ### For Dialogflow Chatbot
 
